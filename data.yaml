@@ -1,0 +1,135 @@
+rides:
+  1:
+    name: Ride 1.
+    image: placeholder.gif
+    description: |
+      You will die here.
+  2:
+    name: Ride 2.
+    image: placeholder.gif
+    description: |
+      sdfskjldfskjls.
+      Buy today. :D
+      Wooooooooooooooooo.
+  3:
+    name: Ride 3.
+    image: placeholder.gif
+    description: |
+      dfskldfsjdfskjl
+  4:
+    name: Ride 4.
+    image: placeholder.gif
+    description: |
+      dfskldfsjdfskjl
+  5:
+    name: Ride 5.
+    image: placeholder.gif
+    description: |
+      dfskldfsjdfskjl
+  6:
+    name: Ride 6.
+    image: placeholder.gif
+    description: |
+      dfskldfsjdfskjl
+  7:
+    name: Ride 7.
+    image: placeholder.gif
+    description: |
+      dfskldfsjdfskjl
+  8:
+    name: Ride 8.
+    image: placeholder.gif
+    description: |
+      dfskldfsjdfskjl
+  9:
+    name: Ride 9.
+    image: placeholder.gif
+    description: |
+      dfsjldfskjl
+  10:
+    name: Ride 10.
+    image: placeholder.gif
+    description: |
+      kldfsfkjlds
+
+restaurants:
+  1:
+    name: Restaurant 1.
+    image: placeholder-smaller.gif
+    description: |
+      Deadly food. Yum. :D
+    menu:
+      item_name:
+        - 239.99
+        - The best dish ever.
+      item_name2:
+        - 0.24
+        - The worst dish ever.
+      item_name3:
+        - 0
+        - Always trust free dishes.
+  2:
+    name: Restaurant 2.
+    image: placeholder-smaller.gif
+    description: |
+      Deadly food. Yum. :D
+      dfskjldfsdfkl
+      ldfskjdfskjl
+    menu:
+      item_name:
+        - 239.99
+        - fsklkjldfsfs.
+  3:
+    name: Restaurant 3.
+    image: placeholder-smaller.gif
+    description: |
+      dfskljfldskjfd
+    menu:
+      item_name:
+        - 239.99
+        - fsklkjldfsfs.
+
+gifts:
+  1:
+    name: Gift 1.
+    image: placeholder-smaller.gif
+    description: |
+      dfskljfldskjfd
+  2:
+    name: Gift 2.
+    image: placeholder-smaller.gif
+    description: |
+      The death giver.
+      HAHAHAHAHAHHAHAHAHAHAHAHA.
+  3:
+    name: Gift 3.
+    image: placeholder-smaller.gif
+    description: |
+      dfskljfldskjfd
+
+characters:
+  1:
+    name: Character 1.
+    images: # Walking left, walking right, and staring front.
+      - placeholder.gif
+      - placeholder.gif
+      - placeholder.gif
+    description: |
+      dfskljfldskjfd
+  2:
+    name: Character 2.
+    images:
+      - placeholder.gif
+      - placeholder.gif
+      - placeholder.gif
+    description: |
+      dfskljfldskjfd
+      The best person in the world.
+  3:
+    name: Character 3.
+    images:
+      - placeholder.gif
+      - placeholder.gif
+      - placeholder.gif
+    description: |
+      dfskljfldskjfd
