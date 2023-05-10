@@ -40,7 +40,10 @@ class Item:
 class Section:
     def __init__(self, position: tuple[int, int], name: str, title_image: str, items: list):
         self.name = name
+
+        self.title_item = Item(title_image)
         self.title_image = image_prefix + title_image
+
         self.items = items
         self.position = position
 
@@ -49,6 +52,7 @@ class Section:
         position_up = menu_position_up * (len(self.items) - 1)
         for i in range(len(self.items)):
             self.items[i].set_pos(self.position[0] + position * i - menu_position/2, self.position[1] + position_up * (i % 2))
+        self.title_item.set_pos(self.position[0], self.position[1] - 100)
 
 
 class Ride(Item):

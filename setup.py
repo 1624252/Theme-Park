@@ -3,13 +3,16 @@ from objects import *
 from yaml import safe_load
 
 screen: Screen = None
+
 sections: list[Section] = []
+
+ride_sections: list[Section] = []
 restaurant_section: RestaurantSection
 gift_shop: GiftShop
 
 
 def initiate():
-    global screen, sections, restaurant_section, gift_shop
+    global screen, ride_sections, restaurant_section, gift_shop
     screen = Screen()
     import_screen()
     setup(1.0, 1.0)
@@ -19,9 +22,9 @@ def initiate():
     # screen.getcanvas().winfo_toplevel().attributes('-fullscreen', True)
 
     positions = [
-        (-520, 290),
-        (0, 290),
-        (520, 290),
+        (-520, 280),
+        (0, 280),
+        (520, 280),
         (-245, -225),
         (245, -225),
         (-740, -305),
@@ -29,13 +32,13 @@ def initiate():
     ]
 
     section_data = [
-        ("Section 1", "placeholder.gif"),
-        ("Section 2", "placeholder.gif"),
-        ("Section 3", "placeholder.gif"),
-        ("Section 4", "placeholder.gif"),
-        ("Section 5", "placeholder.gif"),
+        ("Section 1", "banner1.gif"),
+        ("Section 2", "banner2.gif"),
+        ("Section 3", "banner3.gif"),
+        ("Section 4", "banner1.gif"),
+        ("Section 5", "banner2.gif"),
     ]
-    sections = []
+    ride_sections = []
     restaurants = []
     gifts = []
     characters = []
@@ -48,7 +51,7 @@ def initiate():
         print(data)
 
         for i in range(5):
-            sections.append(
+            ride_sections.append(
                 RideSection(
                     positions[i],
                     section_data[i][0],
@@ -60,6 +63,7 @@ def initiate():
                     ) for q in range(1, 3))
                 )
             )
+            sections.append(ride_sections[i])
 
         for i in range(3):
             restaurants.append(
@@ -89,8 +93,10 @@ def initiate():
                 )
             )
 
-    restaurant_section = RestaurantSection(positions[-2], "placeholder.gif", restaurants)
-    gift_shop = GiftShop(positions[-1], "placeholder.gif", gifts)
+    restaurant_section = RestaurantSection(positions[-2], "banner2.gif", restaurants)
+    gift_shop = GiftShop(positions[-1], "banner3.gif", gifts)
+    sections.append(restaurant_section)
+    sections.append(gift_shop)
 
     tracer(1, 0)
 
@@ -99,7 +105,5 @@ def menu():
     tracer(0, 0)
     for section in sections:
         section.menu()
-    restaurant_section.menu()
-    gift_shop.menu()
     update()
     tracer(1, 0)
