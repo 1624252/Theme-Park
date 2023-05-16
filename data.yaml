@@ -2,11 +2,13 @@ rides:
   1:
     name: Ride 1.
     image: placeholder.gif
+    location: [450, 450]
     description: |
       You will die here.
   2:
     name: Ride 2.
     image: placeholder.gif
+    location: [-450, -450]
     description: |
       sdfskjldfskjls.
       Buy today. :D
@@ -14,41 +16,49 @@ rides:
   3:
     name: Ride 3.
     image: placeholder.gif
+    location: [-450, -450]
     description: |
       dfskldfsjdfskjl
   4:
     name: Ride 4.
     image: placeholder.gif
+    location: [450, 450]
     description: |
       dfskldfsjdfskjl
   5:
     name: Ride 5.
     image: placeholder.gif
+    location: [450, 450]
     description: |
       dfskldfsjdfskjl
   6:
     name: Ride 6.
     image: placeholder.gif
+    location: [450, 450]
     description: |
       dfskldfsjdfskjl
   7:
     name: Ride 7.
     image: placeholder.gif
+    location: [450, 450]
     description: |
       dfskldfsjdfskjl
   8:
     name: Ride 8.
     image: placeholder.gif
+    location: [450, 450]
     description: |
       dfskldfsjdfskjl
   9:
     name: Ride 9.
     image: placeholder.gif
+    location: [450, 450]
     description: |
       dfsjldfskjl
   10:
     name: Ride 10.
     image: placeholder.gif
+    location: [450, 450]
     description: |
       kldfsfkjlds
 
@@ -56,56 +66,46 @@ restaurants:
   1:
     name: Restaurant 1.
     image: placeholder-smaller.gif
+    location: [-500, 270]
     description: |
       Deadly food. Yum. :D
-    menu:
-      item_name:
-        - 239.99
-        - The best dish ever.
-      item_name2:
-        - 0.24
-        - The worst dish ever.
-      item_name3:
-        - 0
-        - Always trust free dishes.
+    menu: placeholder.gif
   2:
     name: Restaurant 2.
     image: placeholder-smaller.gif
+    location: [0, 270]
     description: |
       Deadly food. Yum. :D
       dfskjldfsdfkl
       ldfskjdfskjl
-    menu:
-      item_name:
-        - 239.99
-        - fsklkjldfsfs.
+    menu: placeholder.gif
   3:
     name: Restaurant 3.
     image: placeholder-smaller.gif
+    location: [500, 270]
     description: |
       dfskljfldskjfd
-    menu:
-      item_name:
-        - 239.99
-        - fsklkjldfsfs.
+    menu: placeholder.gif
 
 gifts:
   1:
     name: Gift 1.
     image: placeholder-smaller.gif
+    location: [-500, 270]
     description: |
       dfskljfldskjfd
   2:
     name: Gift 2.
     image: placeholder-smaller.gif
+    location: [0, 270]
     description: |
-      The death giver.
-      HAHAHAHAHAHHAHAHAHAHAHAHA.
+      The death giver. HAHAHAHAHAHAHAAHHAAHAHAHAH. Why would you buy this? If you do, you'll die. If you don't, you'll die. :D
   3:
     name: Gift 3.
     image: placeholder-smaller.gif
+    location: [500, 270]
     description: |
-      dfskljfldskjfd
+      dfskljfldskjfd word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word.
 
 characters:
   1:

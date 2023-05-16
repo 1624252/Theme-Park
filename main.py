@@ -8,6 +8,7 @@ from objects import *
 from setup import *
 
 
+image_setup()
 initiate()
 
 
