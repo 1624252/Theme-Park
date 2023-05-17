@@ -211,8 +211,8 @@ def initiate():
     ride_sections[4].items[0].set_animation(bay)
 
     def bomb(x, y):
-        print(x, y)
-        if -412 <= x <= -535 and 57 <= y <= 119:
+        if -535 <= x <= -412 and 57 <= y <= 119:
+            print("kjldfskjlfskjl")
             old = gifts[0].turtle.shape()
             for i in range(5):
                 gifts[0].turtle.shape(static_image_prefix + f"hbomb-{i + 1}.gif")
@@ -222,7 +222,6 @@ def initiate():
     gifts[0].turtle.onclick(bomb)
 
     def berlin(x, y):
-        print(x, y)
         if gifts[1].turtle.shape().endswith(f"berlin-zoom{zoom_limit - 1}.gif"):
             if 172 <= x <= 237 and 311 <= y <= 381:
                 gifts[1].turtle.shape(static_image_prefix + "berlin-1.gif")
