@@ -2,6 +2,9 @@ from turtle import Turtle, Screen, tracer, update
 from tkinter import Tk, Label, Button, PhotoImage, Toplevel, TclError
 from random import randint
 
+import sys
+import os
+
 character_speed = 0.5
 
 default_speed = 7
@@ -10,8 +13,18 @@ menu_position_up = 50
 
 zoom_limit = 20
 
-image_prefix = "images/items/"
-static_image_prefix = "images/static/"
+
+def resource_path(relative_path):
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+    return os.path.join(base_path, relative_path)
+
+
+image_prefix = resource_path("images/items/")
+static_image_prefix = resource_path("images/static/")
 screen: Screen
 
 
@@ -342,14 +355,14 @@ class Ride(Item):
         self.animation = animate
         if prepare_function is None:
             def prepare_function():
-                self.turtle.shape(static_image_prefix + self.image[13:-4] + "-base.gif")
+                self.turtle.shape(static_image_prefix + self.image[len(image_prefix):-4] + "-base.gif")
 
                 if self.prepared:
                     self.move_turtle.showturtle()
                     return
 
                 tracer(0, 0)
-                self.move_turtle = Turtle(static_image_prefix + self.image[13:-4] + "-move.gif")
+                self.move_turtle = Turtle(static_image_prefix + self.image[len(image_prefix):-4] + "-move.gif")
                 self.move_turtle.speed(0)
                 self.move_turtle.penup()
                 self.move_turtle.goto(self.turtle.xcor(), self.turtle.ycor())

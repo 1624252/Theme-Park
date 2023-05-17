@@ -1,4 +1,4 @@
-from turtle import setup, tracer, update
+from turtle import setup
 from objects import *
 from yaml import safe_load
 
@@ -6,6 +6,7 @@ from time import sleep
 
 from os import listdir
 from PIL import Image
+from sys import exit
 
 screen: Screen = None
 
@@ -16,18 +17,19 @@ restaurant_section: RestaurantSection
 gift_shop: GiftShop
 guest_list: Item
 title: Item
+exit_button: Item
 
 ignore = ("background.gif",)
 default = (535, 250)
 
 
 def image_setup():
-    already = listdir("images/items")
-    new = listdir("images")
+    already = listdir(resource_path("images/items"))
+    new = listdir(resource_path("images"))
     for i in new:
         if i[-4:] != ".gif" or i in ignore:
             continue
-        image = Image.open("images/" + i)
+        image = Image.open(resource_path("images/" + i))
         starting_size = image.size
 
         difference = (default[0], default[0] / starting_size[0] * starting_size[1])
@@ -44,30 +46,31 @@ def image_setup():
             new = (starting_size[0] + difference[0] * q, starting_size[1] + difference[1] * q)
 
             image = image.resize((round(new[0]), round(new[1])))
-            image.save(name, "PNG")
+            image.save(resource_path(name), "PNG")
             if q == zoom_limit - 1:
-                image.save("images/items/" + i, "PNG")
+                image.save(resource_path("images/items/" + i), "PNG")
 
 
 def initiate():
-    global screen, ride_sections, restaurant_section, gift_shop, guest_list, title
+    global screen, ride_sections, restaurant_section, gift_shop, guest_list, title, exit_button
     screen = Screen()
     screen.title("Theme Park")
-    import_screen()
     setup(1.0, 1.0)
-    screen.bgpic("images/static/background.png")  # 1920x1080.
+    screen.getcanvas().winfo_toplevel().state("zoomed")
+    import_screen()
+    screen.bgpic(resource_path("images/static/background.png"))  # 1920x1080.
 
     # DON'T UNCOMMENT THIS UNTIL WE ARE SHOWING EVERYONE.
     # screen.getcanvas().winfo_toplevel().attributes('-fullscreen', True)
 
-    already = listdir("images/items")
-    already2 = listdir("images/static")
+    already = listdir(resource_path("images/items"))
+    already2 = listdir(resource_path("images/static"))
     for i in already:
-        screen.addshape("images/items/" + i)
+        screen.addshape(resource_path("images/items/" + i))
     for i in already2:
         if i[-4:] != ".gif":
             continue
-        screen.addshape("images/static/" + i)
+        screen.addshape(resource_path("images/static/" + i))
 
     positions = [
         (-540, 300),
@@ -96,7 +99,7 @@ def initiate():
     title = Item("Colors of History", "title.gif", "", prefix=static_image_prefix)
     title.set_pos(0, 30)
 
-    with open("data.yaml", encoding="utf8") as file:
+    with open(resource_path("data.yaml"), encoding="utf8") as file:
         data = safe_load(file)
 
         print(data)
@@ -173,7 +176,7 @@ def initiate():
         q2.append((i / (animation_limit - 1)) ** 2)
     for i in range(animation_limit // 2):
         q2.append((i / (animation_limit // 2 - 1)) ** 0.5)
-    for i in range(wait_limit * 27):
+    for i in range(wait_limit * 9):
         q2.append(q2[-1])
 
     def missile(ride: Ride, t: int):
@@ -197,7 +200,7 @@ def initiate():
         ride.move_turtle.goto(ride.zoom_destination[0], ride.zoom_destination[1] + 300 - 290 * 2 * q[w])
 
     def bay(ride: Ride, t: int):
-        w = t % (animation_limit + animation_limit // 2 + wait_limit * 27)
+        w = t % (animation_limit + animation_limit // 2 + wait_limit * 9)
         if w < animation_limit:
             ride.move_turtle.goto(ride.zoom_destination[0] - 300 + 320 * q[w],
                                   ride.zoom_destination[1] - 340 + 360 * q[w])
@@ -230,12 +233,12 @@ def initiate():
     def berlin(x, y):
         if gifts[1].turtle.shape().endswith(f"berlin-zoom{zoom_limit - 1}.gif"):
             if 172 <= x <= 237 and 311 <= y <= 381:
-                gifts[1].turtle.shape(static_image_prefix + "berlin-1.gif")
+                gifts[1].turtle.shape(resource_path(static_image_prefix + "berlin-1.gif"))
         else:
             if 61 <= x <= 144 and -18 <= y <= 61 and gifts[1].turtle.shape().endswith(f"berlin-1.gif"):
-                gifts[1].turtle.shape(static_image_prefix + "berlin-2.gif")
+                gifts[1].turtle.shape(resource_path(static_image_prefix + "berlin-2.gif"))
             elif 7 <= x <= 146 and -30 <= y <= 178:
-                gifts[1].turtle.shape(image_prefix + f"berlin-zoom{zoom_limit - 1}.gif")
+                gifts[1].turtle.shape(resource_path(image_prefix + f"berlin-zoom{zoom_limit - 1}.gif"))
 
     gifts[1].turtle.onclick(berlin)
 
@@ -246,7 +249,7 @@ def initiate():
             except:
                 pass
         guest_list.popup = Toplevel()
-        image = PhotoImage(file=static_image_prefix + "guest-list.png")
+        image = PhotoImage(file=resource_path(static_image_prefix + "guest-list.png"))
         guest_list.popup.title("Guest List")
         guest_list.popup.geometry(
             f"{image.width()}x{image.height()}+{int((guest_list.popup.winfo_screenwidth() - image.width()) / 2)}+{int((guest_list.popup.winfo_screenheight() - image.height()) / 2)}")
@@ -258,6 +261,10 @@ def initiate():
     guest_list = Item("Guest List", "guest-list-button.gif", "", prefix=static_image_prefix)
     guest_list.set_pos(-810, 20)
     guest_list.turtle.onclick(open_list)
+
+    exit_button = Item("Exit", "exit.gif", "", prefix=static_image_prefix)
+    exit_button.set_pos(845, 460)
+    exit_button.turtle.onclick(lambda x, y: exit())
 
     tracer(1, 0)
 
@@ -271,6 +278,8 @@ def menu():
         section.menu()
         guest_list.turtle.showturtle()
         title.turtle.showturtle()
+        exit_button.turtle.showturtle()
+
     update()
     tracer(1, 0)
 
@@ -282,6 +291,7 @@ def hide_rest(keep):
             section.hide()
             guest_list.turtle.hideturtle()
             title.turtle.hideturtle()
+            exit_button.turtle.hideturtle()
             try:
                 guest_list.popup.destroy()
             except:
