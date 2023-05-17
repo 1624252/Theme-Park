@@ -13,6 +13,7 @@ ride_sections: list[Section] = []
 restaurant_section: RestaurantSection
 gift_shop: GiftShop
 guest_list: Item
+title: Item
 
 ignore = ("background.gif",)
 default = (535, 250)
@@ -47,7 +48,7 @@ def image_setup():
 
 
 def initiate():
-    global screen, ride_sections, restaurant_section, gift_shop, guest_list
+    global screen, ride_sections, restaurant_section, gift_shop, guest_list, title
     screen = Screen()
     screen.title("Theme Park")
     import_screen()
@@ -89,6 +90,9 @@ def initiate():
     characters = []
 
     tracer(0, 0)
+
+    title = Item("Colors of History", "title.gif", "", prefix=static_image_prefix)
+    title.set_pos(0, 30)
 
     with open("data.yaml", encoding="utf8") as file:
         data = safe_load(file)
@@ -235,6 +239,7 @@ def menu():
     for section in sections:
         section.menu()
         guest_list.turtle.showturtle()
+        title.turtle.showturtle()
     update()
     tracer(1, 0)
 
@@ -245,8 +250,13 @@ def hide_rest(keep):
         if section != keep:
             section.hide()
             guest_list.turtle.hideturtle()
+            title.turtle.hideturtle()
             try:
                 guest_list.popup.destroy()
+            except:
+                pass
+            try:
+                title.popup.destroy()
             except:
                 pass
     update()

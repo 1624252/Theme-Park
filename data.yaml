@@ -189,9 +189,9 @@ characters:
   1:
     name: Harry "Anti-Communist" Truman
     images: # Walking left, walking right, and staring front.
-      - placeholder.gif
-      - placeholder.gif
-      - placeholder.gif
+      - truman-left.gif
+      - truman-right.gif
+      - truman-center.gif
     sections: [1,]
     description: |
       Designed in introducing his own philosophy of fighting communist ideology to the amusement park workers. The clothing will be the common motif of the American flag for the suit and navy-blue pants. The shoes are black and customary to the time. His face is consistent with Harry Truman’s face. 
@@ -215,9 +215,9 @@ characters:
   3:
     name: King Stalin
     images:
-      - placeholder.gif
-      - placeholder.gif
-      - placeholder.gif
+      - stalin-left.gif
+      - stalin-right.gif
+      - stalin-center.gif
     sections: [1,]
     description: |
       The character is designed as the first pro communist regime leader of the cold war. He has a red robe and green suit with buttons down. In addition, his crown is silver and has the Soviet Union flag marked on it. His shoes are black and pants green as well. He has the face of Stalin, including a mustache. 
