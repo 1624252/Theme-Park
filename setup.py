@@ -210,14 +210,20 @@ def initiate():
     ride_sections[1].items[1].set_animation(thunder)
     ride_sections[4].items[0].set_animation(bay)
 
+    bomb_happening = False
+
     def bomb(x, y):
+        nonlocal bomb_happening
+        if bomb_happening:
+            return
+        bomb_happening = True
         if -535 <= x <= -412 and 57 <= y <= 119:
-            print("kjldfskjlfskjl")
             old = gifts[0].turtle.shape()
             for i in range(5):
                 gifts[0].turtle.shape(static_image_prefix + f"hbomb-{i + 1}.gif")
                 sleep(0.5 if i != 4 else 5)
             gifts[0].turtle.shape(old)
+            bomb_happening = False
 
     gifts[0].turtle.onclick(bomb)
 
