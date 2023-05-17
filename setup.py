@@ -211,7 +211,8 @@ def initiate():
     ride_sections[4].items[0].set_animation(bay)
 
     def bomb(x, y):
-        if -436 <= x <= -313 and 100 <= y <= 158:
+        print(x, y)
+        if -412 <= x <= -535 and 57 <= y <= 119:
             old = gifts[0].turtle.shape()
             for i in range(5):
                 gifts[0].turtle.shape(static_image_prefix + f"hbomb-{i + 1}.gif")
@@ -219,6 +220,19 @@ def initiate():
             gifts[0].turtle.shape(old)
 
     gifts[0].turtle.onclick(bomb)
+
+    def berlin(x, y):
+        print(x, y)
+        if gifts[1].turtle.shape().endswith(f"berlin-zoom{zoom_limit - 1}.gif"):
+            if 172 <= x <= 237 and 311 <= y <= 381:
+                gifts[1].turtle.shape(static_image_prefix + "berlin-1.gif")
+        else:
+            if 61 <= x <= 144 and -18 <= y <= 61 and gifts[1].turtle.shape().endswith(f"berlin-1.gif"):
+                gifts[1].turtle.shape(static_image_prefix + "berlin-2.gif")
+            elif 7 <= x <= 146 and -30 <= y <= 178:
+                gifts[1].turtle.shape(image_prefix + f"berlin-zoom{zoom_limit - 1}.gif")
+
+    gifts[1].turtle.onclick(berlin)
 
     def open_list(x, y):
         if guest_list.popup is not None:

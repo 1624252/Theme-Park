@@ -118,7 +118,7 @@ class Item:
         return label.winfo_height() + 40
 
     def get_description_geometry(self, width, height):
-        offset = (0, -320)
+        offset = (0, -160)
 
         return f"+{round(screen.getcanvas().winfo_rootx() + screen.window_width() / 2 + self.zoom_destination[0] - width / 2 + offset[0])}+{round(screen.getcanvas().winfo_rooty() + screen.window_height() / 2 + self.zoom_destination[1] + offset[1])}"
 
@@ -379,7 +379,7 @@ class Restaurant(Item):
         self.menu_tk = None
 
     def get_popup_height(self, tk, width):
-        label = Label(tk, text=self.name + "\n\n" + self.description, font=("Candara", 15, "normal"), bg="white",
+        label = Label(tk, text=self.name + "\n\n" + self.description, font=("Candara", 12, "normal"), bg="white",
                       wraplength=width - 40, justify="left")
         button = Button(tk, text="Menu", font=("Candara", 15, "normal"), bg="cyan", command=lambda: self.open_menu())
         tk.geometry("0x0")

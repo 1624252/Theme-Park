@@ -132,7 +132,7 @@ rides:
 restaurants:
   1:
     name: The Atomic Taste
-    image: placeholder-smaller.gif
+    image: atomic.gif
     location: [-500, 270]
     description: |
       Description- Metallic gray paint outside. Holds a giant nuclear bomb on top as a sign and a pyramid for the roof. The building is long in length and double doored. The name of the restaurant is on a sign.
@@ -141,7 +141,7 @@ restaurants:
     menu: atomic-menu.png
   2:
     name: Viet's Barbeque Shack
-    image: placeholder-smaller.gif
+    image: viet.gif
     location: [0, 270]
     description: |
       Description- The walls are made of bamboo sticks in the shape of a good-sized shack. The tables are outside for eating and a smoker exists next to the building. 
@@ -149,8 +149,8 @@ restaurants:
       Holds relevance in connecting to the Vietnam war where the Americans fought the Viet Congs and bamboo traps as well as much guerilla warfare using the forests were used. The food is made of these traps and the parts of others.
     menu: viet-menu.png
   3:
-    name: Dirt Cheap
-    image: placeholder-smaller.gif
+    name: The Shack
+    image: shack.gif
     location: [500, 270]
     description: |
       Description- A small stand with a wooden signboard on top. The seats are rocks. It's as plain as it gets.  
@@ -162,23 +162,23 @@ gifts:
   1:
     name: The Hydrogen Bomb
     image: hbomb.gif
-    location: [-500, 277]
+    location: [-600, 250]
     description: >
       Has a little red button next to it that says, “Do Not Press”. When pressed, it sets a little alarm that ends with
       “Sorry, we want to avoid a nuclear war”. The souvenir connects to the park and historically by using the hydrogen
       bomb, a major source of tension during the Cold War, as a message to both Countries in the importance of peace.
   2:
     name: Berlin Airplane Chocolate Dropper
-    image: placeholder-smaller.gif
-    location: [0, 277]
+    image: berlin.gif
+    location: [0, 250]
     description: >
       This holds a mechanism that, when pushing the tail, drops a chocolate supply box onto one's hand as a supply drop.
       Inside the box is a random piece of candy. The Souvenir is relevant to the prompt and the historic moments by
       depicting another version of the Berlin Airlift. The plane drops the supplies of candy to the user rather than Berlin.
   3:
     name: Capitalism Candy Bill
-    image: placeholder-smaller.gif
-    location: [500, 277]
+    image: capitalism.gif
+    location: [600, 250]
     description: >
       On it, the candy bill says, “The Taste of Freedom”. Has Truman’s face on it to show that he endorses this ideology
       and uses the bill as a form of propaganda. It holds relevance in taking form some of the various forms of
