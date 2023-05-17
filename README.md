@@ -17,7 +17,7 @@ Here is a list of everything you can do within the park:
 - Certain sections have guests walking around. You are able to click and/or drag these characters multiple times. Sometimes, they might end up behind a moving ride, in which case you will be unable to click on them (if this happens, you must wait for them to walk to a more open area).
 - Each ride has its description in a popup window somewhere near it. These mini windows may be moved or closed if desired (e.g., if you want to see more of the screen).
 - In the restaurants section, click the "Menu" button in each description window to open the menu for the corresponding restaurant. Again, these menus will be in mini windows that can be closed. Mini windows also close whenever you return to the menu, so manually closing all of them is not required.
-- In the gift shop, you are able to press the "DO NOT PRESS!" button of the hydrogen bomb souvenir. You are also able to press the top of the tail of the Berlin airplane chocolate dropper, the compartment that pops out, and the box in the compartment. ![Example tutorial](https://gyazo.com/a03f027e5d284eac6a46631a76c16502).
+- In the gift shop, you are able to press the "DO NOT PRESS!" button of the hydrogen bomb souvenir. You are also able to press the top of the tail of the Berlin airplane chocolate dropper, the compartment that pops out, and the box in the compartment. [Example tutorial](https://gyazo.com/a03f027e5d284eac6a46631a76c16502).
 
 ***
 Unfortunately, yes, the zoom animation from the menu to each section is very choppy. It probably would have been better to use a different library than Python Turtle, which is somewhat limited for image animations.
