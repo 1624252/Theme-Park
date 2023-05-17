@@ -1,135 +1,227 @@
 rides:
   1:
-    name: Ride 1.
-    image: placeholder.gif
-    location: [450, 450]
-    description: |
-      You will die here.
+    name: The Missile
+    image: missile.gif
+    location: [580, -130]
+    offset: [-140, -450]
+    width: 1000
+    description: >
+      The ride begins inside the missile. The countdown will begin, and a clip of the warships will be prepared.
+      Then, the missile will be launched at extreme speeds and end with a screen saying, “What would result of this
+      world if the nukes were launched”. The characters of Kennedy and Khruschev would then negotiate for a heartfelt
+      message. The Cuban Missile Crisis action would have turned the Cold War into a hot nuclear war because of the
+      threat of mutually assured destruction. The leaders of the two superpowers—Soviet leader Nikita Khrushchev and
+      President Kennedy—were able to overcome the inertia of groupthink by their advisors and be calmer and cooler than
+      everyone around them to prevent a catastrophe.
   2:
-    name: Ride 2.
-    image: placeholder.gif
-    location: [-450, -450]
-    description: |
-      sdfskjldfskjls.
-      Buy today. :D
-      Wooooooooooooooooo.
+    name: The Freedom Flyover
+    image: free-fly.gif
+    location: [-450, 200]
+    offset: [0, 140]
+    width: 1000
+    description: >
+      This ride is based on the Berlin Airlift. It features a roller coaster ride with shuttles that resemble C-47 and
+      C-54 aircraft to mimic the military planes used during the Berlin Airlift. The user will ride in the plane and
+      pretend to be a supply drop. Then, through random chance, they will be launched down to “Berlin” to fuel the
+      people in order to further support the containment policy of the US. During the Berlin Airlift, the U.S. and U.K.
+      delivered more than 2.3 million tons of food, fuel and supplies to West Berlin via more than 278,000 airdrops.
+      American aircrews made more than 189,000 flights, totaling nearly 600,000 flying hours and exceeding 92 million miles.
   3:
-    name: Ride 3.
-    image: placeholder.gif
-    location: [-450, -450]
-    description: |
-      dfskldfsjdfskjl
+    name: Into the Jungle
+    image: jungle.gif
+    location: [-500, 70]
+    offset: [-880, -471]
+    width: 700
+    description: >
+      Guests must traverse a war-torn land in the jungle of Vietnam. Workers dressed as military personnel in hazmat
+      suits and war-hardened survivors will jump at the guest as they progress through the roller coaster ride and shoot
+      down the guest (with water). The ride demonstrates the experience of soldiers in the Vietnam War as well as how
+      easy it was to die to the guerilla warfare tactics of the Viet Cong. The jungle shows how well-hidden enemies were
+      and how indirect the bloodshed that occurred was during the Vietnam War.
   4:
-    name: Ride 4.
-    image: placeholder.gif
-    location: [450, 450]
-    description: |
-      dfskldfsjdfskjl
+    name: Thunder Coaster
+    image: thunder.gif
+    location: [470, 90]
+    offset: [-120, 364]
+    width: 1200
+    description: >
+      A dropping attraction meant to represent a bomb rushing to the ground. Guests board the bomb and experience
+      dropping from extreme heights. The operation has a narration of the mission and 3D art of the visual destruction.
+      The goal of this operation is to show the damage and give firsthand experience of the Operation Rolling Thunder
+      during the Vietnam War as a bomb on the plane and the mission of the operator. This shows the historic
+      significance of the event as well as the damage it incurs.
   5:
-    name: Ride 5.
-    image: placeholder.gif
-    location: [450, 450]
-    description: |
-      dfskldfsjdfskjl
+    name: Packed Away
+    image: packed.gif
+    location: [-450, 190]
+    offset: [0, 200]
+    width: 1000
+    description: >
+      This ride shows Upton Sinclair’s “The Jungle” where the coaster is designed as a pig and the audience rides
+      inside. Here, the audience journeys through various knives and unsanitary conditions of the meat packing plant
+      and ends with driving through the butcher’s knife. The idea is to highlight the journey of one of the most
+      prominent exposés of the progressive movement. The revelation of the unsanitary conditions of the meat packing
+      plant expressed by the book is also shown in the ride. As a result, the Pure Food and Drug Act passed.
   6:
-    name: Ride 6.
-    image: placeholder.gif
-    location: [450, 450]
-    description: |
-      dfskldfsjdfskjl
+    name: The Other Ride
+    image: other.gif
+    location: [580, -107]
+    offset: [-140, -460]
+    width: 1000
+    description: >
+      This ride plays on the words of the expose “The Other Side” and tours through the tenement housing. The ride goes
+      through the unsanitary conditions of the house, the excess dirt and dust, and zooms in to see the germs of the
+      housing. The ride ends with a screen asking if it is just to allow treatment like this. This is historically
+      relevant as the expose is important to the time period. While in the past, the conditions of immigrants were
+      ignored to the extravagance of the rich, the expose shows the harmful effects of poverty similar to the ride,
+      leading to awareness in the riders similar to how the expose brought awareness to American Society.
   7:
-    name: Ride 7.
-    image: placeholder.gif
-    location: [450, 450]
-    description: |
-      dfskldfsjdfskjl
+    name: Hooveride
+    image: hoover.gif
+    location: [-450, 190]
+    offset: [-20, 170]
+    width: 1000
+    description: >
+      The riders spin around in an upside-down Hooverville tent. It is designed using the centripetal force to keep the
+      members on the walls. With the majority of those in Hoovervilles being in debt and only a few escaping it, we made
+      it so that the last person to fall is the only one who doesn’t “drown” in debt. The floor is covered in banknotes
+      of debt to symbolize the poverty of the great depression. The Great Depression is characterized by poverty and
+      debt. With a rush on banks occurring to take money out, many citizens are left in debt. With even fewer jobs being
+      available, the ride is designed to simulate the harshness of obtaining success and money in harsh times of recession.
   8:
-    name: Ride 8.
-    image: placeholder.gif
-    location: [450, 450]
-    description: |
-      dfskldfsjdfskjl
+    name: Money-Go-Round
+    image: money.gif
+    location: [560, -107]
+    offset: [-140, -430]
+    width: 1000
+    description: >
+      Ride on some horses and carry your laser gun. Shoot the dollar bills in the bank rush that fly by in order to get
+      out of 10,000 dollars of debt. The twist is that some fly by dollars are actually bank notes of more debt. The
+      rush on banks occurred during the Great Depression. The ride symbolizes the grab for money. The shooting of the
+      money displays random chance of getting money out or not. The end result is a historic situation. With the
+      difficulty of the ride and members already in debt in losing much of their money, most of the riders will stay in
+      debt at the end of the coaster ride.
   9:
-    name: Ride 9.
-    image: placeholder.gif
-    location: [450, 450]
-    description: |
-      dfsjldfskjl
+    name: Pig Bay Ride
+    image: bay.gif
+    location: [530, 150]
+    offset: [-120, 274]
+    width: 1000
+    description: >
+      Ride the pig roller coaster over the bay and shoot the Cubans before they shoot you. The goal above all is
+      survival. The Bay of Pigs was a massacre and failure on JFK’s part and thus has a high danger rating. With enemies
+      surrounding the riders, it will prove difficult to make it out the ride alive. The goal of the ride is to show the
+      flaws of the Bay of Pigs and difficulties of war and bloodshed. Its historical relevance presides in its
+      connection with the Bay of Pigs, which occurred under JFK’s presidency and supervision. His order of the Bay of
+      Pigs proved a failure and, like the ride, had a high mortality rate.
   10:
-    name: Ride 10.
-    image: placeholder.gif
-    location: [450, 450]
-    description: |
-      kldfsfkjlds
+    name: Peacemaker
+    image: peace.gif
+    location: [-500, -60]
+    offset: [-1070, -405]
+    width: 700
+    description: >
+      Use the peace guns and shoot your peace to nearby countries and spread the food, wealth, or shoot at trash nearby
+      to earn points. The winner with the most points gets a peacemaker badge. The gun symbolizes the ways that the
+      volunteers of the peace corps helped developing countries in need. During JFK’s presidency, many developing
+      countries currently suffered from a lack of food and water as well as money. The Peace Corps was created to get
+      the younger generation involved in helping foreign countries and volunteering. This ride holds historic relevance
+      in its direct connection to JFK’s presidency and the Peace Corps being overseen by him in how the riders, like
+      the Peace Corps, solved the problems faced by developing countries.
 
 restaurants:
   1:
-    name: Restaurant 1.
+    name: The Atomic Taste
     image: placeholder-smaller.gif
     location: [-500, 270]
     description: |
-      Deadly food. Yum. :D
-    menu: placeholder.gif
+      Description- Metallic gray paint outside. Holds a giant nuclear bomb on top as a sign and a pyramid for the roof. The building is long in length and double doored. The name of the restaurant is on a sign.
+      
+      Holds relevance from the fear of the atomic bombs during the Cold War. The air can almost be tasted; thus, the restaurant offers it in 3 main courses.
+    menu: atomic-menu.png
   2:
-    name: Restaurant 2.
+    name: Viet's Barbeque Shack
     image: placeholder-smaller.gif
     location: [0, 270]
     description: |
-      Deadly food. Yum. :D
-      dfskjldfsdfkl
-      ldfskjdfskjl
-    menu: placeholder.gif
+      Description- The walls are made of bamboo sticks in the shape of a good-sized shack. The tables are outside for eating and a smoker exists next to the building. 
+      
+      Holds relevance in connecting to the Vietnam war where the Americans fought the Viet Congs and bamboo traps as well as much guerilla warfare using the forests were used. The food is made of these traps and the parts of others.
+    menu: viet-menu.png
   3:
-    name: Restaurant 3.
+    name: Dirt Cheap
     image: placeholder-smaller.gif
     location: [500, 270]
     description: |
-      dfskljfldskjfd
-    menu: placeholder.gif
+      Description- A small stand with a wooden signboard on top. The seats are rocks. It's as plain as it gets.  
+
+      It holds relevance in how the food symbolizes the style of the aspects of the Great Depression, from poverty to the worthless dollar bill, to the need to get jobs and not enough work. The cheap ration lines of bread are included.
+    menu: dirt-menu.png
 
 gifts:
   1:
-    name: Gift 1.
+    name: The Hydrogen Bomb
     image: placeholder-smaller.gif
-    location: [-500, 270]
-    description: |
-      dfskljfldskjfd
+    location: [-500, 277]
+    description: >
+      Has a little red button next to it that says, “Do Not Press”. When pressed, it sets a little alarm that ends with
+      “Sorry, we want to avoid a nuclear war”. The souvenir connects to the park and historically by using the hydrogen
+      bomb, a major source of tension during the Cold War, as a message to both Countries in the importance of peace.
   2:
-    name: Gift 2.
+    name: Berlin Airplane Chocolate Dropper
     image: placeholder-smaller.gif
-    location: [0, 270]
-    description: |
-      The death giver. HAHAHAHAHAHAHAAHHAAHAHAHAH. Why would you buy this? If you do, you'll die. If you don't, you'll die. :D
+    location: [0, 277]
+    description: >
+      This holds a mechanism that, when pushing the tail, drops a chocolate supply box onto one's hand as a supply drop.
+      Inside the box is a random piece of candy. The Souvenir is relevant to the prompt and the historic moments by
+      depicting another version of the Berlin Airlift. The plane drops the supplies of candy to the user rather than Berlin.
   3:
-    name: Gift 3.
+    name: Capitalism Candy Bill
     image: placeholder-smaller.gif
-    location: [500, 270]
-    description: |
-      dfskljfldskjfd word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word.
+    location: [500, 277]
+    description: >
+      On it, the candy bill says, “The Taste of Freedom”. Has Truman’s face on it to show that he endorses this ideology
+      and uses the bill as a form of propaganda. It holds relevance in taking form some of the various forms of
+      propaganda common during this time historically. The US during the Cold War used much propaganda from speeches to
+      posters against the communist. The bill talking of freedom is an example of another form of propaganda for capitalism.
 
 characters:
   1:
-    name: Character 1.
+    name: Harry "Anti-Communist" Truman
     images: # Walking left, walking right, and staring front.
       - placeholder.gif
       - placeholder.gif
       - placeholder.gif
+    sections: [1,]
     description: |
-      dfskljfldskjfd
+      Designed in introducing his own philosophy of fighting communist ideology to the amusement park workers. The clothing will be the common motif of the American flag for the suit and navy-blue pants. The shoes are black and customary to the time. His face is consistent with Harry Truman’s face. 
+      
+      Interaction- The interaction comes at the Cold War section of the theme park. Here, Truman aims to convince the audience to join the capitalist side of America against the communist. He interacts by talking bad of communism and actively engages with the audience to get them to join America.
+      
+      The significance of Truman is that he is responsible for the first events starting the Cold War. His policy of containment started the tension between the Soviets and the US. He created the hydrogen bomb and initiated the Marshall plan to bail Europe out of debt and keep them capitalist. He also initiated the berlin airlift, a success for the capitalist ideology in overriding the blockade by the communists.
   2:
-    name: Character 2.
+    name: New Frontier Kennedy
     images:
-      - placeholder.gif
-      - placeholder.gif
-      - placeholder.gif
+      - jfk-left.gif
+      - jfk-right.gif
+      - jfk-center.gif
+    sections: [1, 2, 5]
     description: |
-      dfskljfldskjfd
-      The best person in the world.
+      Does other rides such as the Cuban missile crisis to show the mediation at the end. His teeth are really white as a symbol of media. He wears a classic black suit and red tie. While against communism, he is the mediator of ideologies after the Cuban missile crisis. Therefore, a simple US flag pin and an olive branch to symbolize peace suits him at the end. 
+      
+      Interaction- He interacts by starting off completely against communism like Truman. He speaks of the flaws in communism and why it is necessary for America to get involved and battle communism through proxy wars. He actively suggests the audience join his alliance. Over time, he changes at the end and becomes more accepting of communism’s existence after the Cuban Missile crisis ride. This shows a message of unity to the audience and ends with a good message. 
+      
+      The significance of this character historically is that President Kennedy initiated much of the foreign policy against communism. His foreign policy was the peace corps to help developing countries and develop relations. He also committed the Bay of Pigs which was aimed to end communism in Cuba but failed ultimately. Finally, there was the Cuban Missile Crisis as the first form of major tension and mediation. It resulted in a form of coexistence between the ideologies and a red line from the US to Russia.
   3:
-    name: Character 3.
+    name: King Stalin
     images:
       - placeholder.gif
       - placeholder.gif
       - placeholder.gif
+    sections: [1,]
     description: |
-      dfskljfldskjfd
+      The character is designed as the first pro communist regime leader of the cold war. He has a red robe and green suit with buttons down. In addition, his crown is silver and has the Soviet Union flag marked on it. His shoes are black and pants green as well. He has the face of Stalin, including a mustache. 
+      
+      Interaction- The character interacts with the audience by ordering them and forcing them into the communist side during the park of the cold war. This adds for a way to get the experience of the Communist side of the Cuban missile crisis. In addition, the character preaches for communism throughout the park as a way to stay in character. 
+      
+      Significance- Stalin was the first communist Cold War leader. He participated in WW2 and earned much land as well as spread communism to other countries. In addition, he was revered by the Marxist as a hero of the working class due to his ideals. He also killed many with his policies and ended political rivals.

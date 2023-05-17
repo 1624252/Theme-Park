@@ -12,6 +12,7 @@ sections: list[Section] = []
 ride_sections: list[Section] = []
 restaurant_section: RestaurantSection
 gift_shop: GiftShop
+guest_list: Item
 
 ignore = ("background.gif",)
 default = (535, 250)
@@ -46,7 +47,7 @@ def image_setup():
 
 
 def initiate():
-    global screen, ride_sections, restaurant_section, gift_shop
+    global screen, ride_sections, restaurant_section, gift_shop, guest_list
     screen = Screen()
     screen.title("Theme Park")
     import_screen()
@@ -57,13 +58,18 @@ def initiate():
     # screen.getcanvas().winfo_toplevel().attributes('-fullscreen', True)
 
     already = listdir("images/items")
+    already2 = listdir("images/static")
     for i in already:
         screen.addshape("images/items/" + i)
+    for i in already2:
+        if i[-4:] != ".gif":
+            continue
+        screen.addshape("images/static/" + i)
 
     positions = [
-        (-540, 280),
-        (0, 280),
-        (540, 280),
+        (-540, 300),
+        (0, 300),
+        (540, 300),
         (-260, -195),
         (260, -195),
         (-740, -315),
@@ -71,11 +77,11 @@ def initiate():
     ]
 
     section_data = [
-        ("Section 1", "banner1.gif"),
-        ("Section 2", "banner2.gif"),
-        ("Section 3", "banner3.gif"),
-        ("Section 4", "banner1.gif"),
-        ("Section 5", "banner2.gif"),
+        ("Overhead City", "overhead.gif"),
+        ("Commie Square", "commie.gif"),
+        ("Muckland", "muck.gif"),
+        ("Dusty City", "dusty.gif"),
+        ("Shots Fired", "shots.gif"),
     ]
     ride_sections = []
     restaurants = []
@@ -84,7 +90,7 @@ def initiate():
 
     tracer(0, 0)
 
-    with open("data.yaml") as file:
+    with open("data.yaml", encoding="utf8") as file:
         data = safe_load(file)
 
         print(data)
@@ -100,6 +106,8 @@ def initiate():
                         data["rides"][i * 2 + q]["image"],
                         data["rides"][i * 2 + q]["description"],
                         data["rides"][i * 2 + q]["location"],
+                        data["rides"][i * 2 + q]["offset"],
+                        data["rides"][i * 2 + q]["width"],
                     ) for q in range(1, 3)),
                     hide_rest,
                     menu,
@@ -136,11 +144,85 @@ def initiate():
                     data["characters"][i + 1]["description"]
                 )
             )
+            for section in data["characters"][i + 1]["sections"]:
+                sections[section - 1].add_character(characters[-1])
 
-    restaurant_section = RestaurantSection(positions[-2], "banner2.gif", restaurants, hide_rest, menu)
-    gift_shop = GiftShop(positions[-1], "banner3.gif", gifts, hide_rest, menu)
+    restaurant_section = RestaurantSection(positions[-2], "restaurants.gif", restaurants, hide_rest, menu)
+    gift_shop = GiftShop(positions[-1], "gifts.gif", gifts, hide_rest, menu)
     sections.append(restaurant_section)
     sections.append(gift_shop)
+
+    animation_limit = 100
+    wait_limit = 70
+    limit = animation_limit + wait_limit
+
+    q = []
+    for i in range(animation_limit):
+        q.append((i / (animation_limit - 1)) ** 2)
+    for i in range(wait_limit):
+        q.append(q[-1])
+
+    q2 = []
+    for i in range(animation_limit):
+        q2.append((i / (animation_limit - 1)) ** 2)
+    for i in range(animation_limit // 2):
+        q2.append((i / (animation_limit // 2 - 1)) ** 0.5)
+    for i in range(wait_limit * 27):
+        q2.append(q2[-1])
+
+    def missile(ride: Ride, t: int):
+        w = t % limit
+        if t // limit % 2 == 1:
+            w = -w
+            if w == 0:
+                w = -1
+        ride.move_turtle.goto(ride.zoom_destination[0], ride.zoom_destination[1] + 10 - 290 * q[w])
+
+    def free_fly(ride: Ride, t: int):
+        w = t % limit
+        ride.move_turtle.goto(ride.zoom_destination[0] - 300 * q[w], ride.zoom_destination[1] - 290 * q[w])
+
+    def thunder(ride: Ride, t: int):
+        w = t % limit
+        if t // limit % 2 == 1:
+            w = -w
+            if w == 0:
+                w = -1
+        ride.move_turtle.goto(ride.zoom_destination[0], ride.zoom_destination[1] + 300 - 290 * 2 * q[w])
+
+    def bay(ride: Ride, t: int):
+        w = t % (animation_limit + animation_limit // 2 + wait_limit * 27)
+        if w < animation_limit:
+            ride.move_turtle.goto(ride.zoom_destination[0] - 300 + 320 * q[w],
+                                  ride.zoom_destination[1] - 340 + 360 * q[w])
+        elif w < animation_limit + animation_limit // 2:
+            ride.move_turtle.goto(ride.zoom_destination[0] + 20 - 2700 * q2[w],
+                                  ride.zoom_destination[1] + 20 - 470 * q2[w])
+
+    ride_sections[0].items[0].set_animation(missile)
+    ride_sections[0].items[1].set_animation(free_fly)
+    ride_sections[1].items[1].set_animation(thunder)
+    ride_sections[4].items[0].set_animation(bay)
+
+    def open_list(x, y):
+        if guest_list.popup is not None:
+            try:
+                guest_list.popup.destroy()
+            except:
+                pass
+        guest_list.popup = Toplevel()
+        image = PhotoImage(file=static_image_prefix + "guest-list.png")
+        guest_list.popup.title("Guest List")
+        guest_list.popup.geometry(
+            f"{image.width()}x{image.height()}+{int((guest_list.popup.winfo_screenwidth() - image.width()) / 2)}+{int((guest_list.popup.winfo_screenheight() - image.height()) / 2)}")
+        label = Label(guest_list.popup, image=image)
+        label.pack()
+        guest_list.popup.attributes("-topmost", True)
+        guest_list.popup.mainloop()
+
+    guest_list = Item("Guest List", "guest-list-button.gif", "", prefix=static_image_prefix)
+    guest_list.set_pos(-810, 20)
+    guest_list.turtle.onclick(open_list)
 
     tracer(1, 0)
 
@@ -152,6 +234,7 @@ def menu():
     tracer(0, 0)
     for section in sections:
         section.menu()
+        guest_list.turtle.showturtle()
     update()
     tracer(1, 0)
 
@@ -161,5 +244,10 @@ def hide_rest(keep):
     for section in sections:
         if section != keep:
             section.hide()
+            guest_list.turtle.hideturtle()
+            try:
+                guest_list.popup.destroy()
+            except:
+                pass
     update()
     tracer(1, 0)
