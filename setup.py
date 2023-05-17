@@ -2,6 +2,8 @@ from turtle import setup, tracer, update
 from objects import *
 from yaml import safe_load
 
+from time import sleep
+
 from os import listdir
 from PIL import Image
 
@@ -208,6 +210,16 @@ def initiate():
     ride_sections[1].items[1].set_animation(thunder)
     ride_sections[4].items[0].set_animation(bay)
 
+    def bomb(x, y):
+        if -436 <= x <= -313 and 100 <= y <= 158:
+            old = gifts[0].turtle.shape()
+            for i in range(5):
+                gifts[0].turtle.shape(static_image_prefix + f"hbomb-{i + 1}.gif")
+                sleep(0.5 if i != 4 else 5)
+            gifts[0].turtle.shape(old)
+
+    gifts[0].turtle.onclick(bomb)
+
     def open_list(x, y):
         if guest_list.popup is not None:
             try:
@@ -253,10 +265,6 @@ def hide_rest(keep):
             title.turtle.hideturtle()
             try:
                 guest_list.popup.destroy()
-            except:
-                pass
-            try:
-                title.popup.destroy()
             except:
                 pass
     update()

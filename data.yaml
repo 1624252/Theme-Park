@@ -161,7 +161,7 @@ restaurants:
 gifts:
   1:
     name: The Hydrogen Bomb
-    image: placeholder-smaller.gif
+    image: hbomb.gif
     location: [-500, 277]
     description: >
       Has a little red button next to it that says, “Do Not Press”. When pressed, it sets a little alarm that ends with
