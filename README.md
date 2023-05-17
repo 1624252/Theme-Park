@@ -28,4 +28,6 @@ Unfortunately, yes, the zoom animation from the menu to each section is very cho
 - Drawings: Mostly CH. Some from JS (the grass, the section banner labels, the park title, the guest description design, the guest list and exit buttons, the hydrogen bomb souvenir, and the Berlin airplane chocolate dropper).
 - Programming: JS. Plus credit to JL (not in the group) for helping fix an error (it was only one word that had to be changed, but the one word was very crucial).
 
+Completed after two nights of staying up until 6 AM because three days were lost due to a competition. :D JS thanks CH for staying up with JS until almost 6 AM the second day to finish most of the drawings.
+
 ***
