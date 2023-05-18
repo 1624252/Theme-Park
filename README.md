@@ -25,9 +25,9 @@ Unfortunately, yes, the zoom animation from the menu to each section is very cho
 ***
 
 ## Credits
-- Descriptions and ideas: Mostly RS. Some from CH. Minimal from JS (park name, some section names, the JFK shot dead idea with help from CH, and checking over descriptions because RS forced JS to).
-- Drawings: Mostly CH. Some from JS (the grass, the section banner labels, the park title, the guest description design, the guest list and exit buttons, the hydrogen bomb souvenir, and the Berlin airplane chocolate dropper).
-- Programming: JS. Plus credit to JL (not in the group) for helping fix an error (it was only one word that had to be changed, but the one word was very crucial).
+- Descriptions and ideas: Mostly RS. Some from CH. Minimal from JS (park name, some section names, the JFK shot dead idea with help from CH, and checking over descriptions because RS forced JS to). Credit to classmate KC for coming up with the name "Commie Square".
+- Drawings: Mostly CH. Some from JS (the grass, the section banner labels, the park title, the guest description design, the guest list and exit buttons, the hydrogen bomb souvenir, and the Berlin airplane chocolate dropper). Credit to other classmate JI for helping adjust the walking character outline.
+- Programming: JS. Credit to JL (also not in the group) for helping fix an error (it was only one word that had to be changed, but the one word was very crucial).
 
 Completed after two nights of staying up until 6 AM because three days were lost due to a competition. :D JS thanks CH for staying up with JS until almost 6 AM the second day to finish most of the drawings.
 
