@@ -9,7 +9,7 @@ Theme Park Project created by JS, CH, and RS.
 ***
 Here is a list of everything you can do within the park:
 ### Menu Screen
-- Click "Guest List" in the middle left for descriptions of guests.
+- Click "Guest List" in the middle left for descriptions of guests. See the third point in [Notes](#Notes) if you are confused about why the guests do not seem to be performing all of the listed interactions.
 - Click each section (either click the banner label or one of the rides) to explore further.
 - Click "Exit" in the top right corner to exit the park.
 
@@ -21,12 +21,17 @@ Here is a list of everything you can do within the park:
 - In the gift shop, you are able to press the "DO NOT PRESS!" button of the hydrogen bomb souvenir. You are also able to press the top of the tail of the Berlin airplane chocolate dropper, the compartment that pops out, and the box in the compartment. [Example tutorial](https://gyazo.com/a03f027e5d284eac6a46631a76c16502).
 
 ***
-Unfortunately, yes, the zoom animation from the menu to each section is very choppy. It probably would have been better to use a different library than Python Turtle, which is somewhat limited for image animations.
+
+## Notes
+- Unfortunately, yes, the zoom animation from the menu to each section is very choppy. It probably would have been better to use a different library than Python Turtle, which is somewhat limited for image animations.
+- There are probably some bugs, and many things could have been improved in the design and in the code, but we were running low on time due to losing three days because of a competition.
+- To anyone who points out how the guests do not perform all of the interactions listed in their descriptions, please familiarize yourself with the double-slit experiment. :D The characters are in fact acting according to their descriptions, just not when you are looking at them.
+
 ***
 
 ## Credits
 - Descriptions and ideas: Mostly RS. Some from CH. Minimal from JS (park name, some section names, the JFK shot dead idea with help from CH, and checking over descriptions because RS forced JS to). Credit to classmate KC for coming up with the name "Commie Square".
-- Drawings: Mostly CH. Some from JS (the grass, the section banner labels, the park title, the guest description design, the guest list and exit buttons, the hydrogen bomb souvenir, and the Berlin airplane chocolate dropper). Credit to other classmate JI for helping adjust the walking character outline.
+- Drawings: Mostly CH. Some from JS (the grass, the section banner labels, the park title, the guest description design, the guest list and exit buttons, the hydrogen bomb souvenir, and the Berlin airplane chocolate dropper). RS made the menus. Credit to other classmate JI for helping adjust the walking person outline.
 - Programming: JS. Credit to JL (also not in the group) for helping fix an error (it was only one word that had to be changed, but the one word was very crucial).
 
 Completed after two nights of staying up until 6 AM because three days were lost due to a competition. :D JS thanks CH for staying up with JS until almost 6 AM the second day to finish most of the drawings.
