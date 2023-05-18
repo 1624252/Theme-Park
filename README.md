@@ -25,7 +25,7 @@ Here is a list of everything you can do within the park:
 ## Notes
 - Unfortunately, yes, the zoom animation from the menu to each section is very choppy. It probably would have been better to use a different library than Python Turtle, which is somewhat limited for image animations.
 - There are probably some bugs, and many things could have been improved in the design and in the code, but we were running low on time due to losing three days because of a competition. (Yes, there are probably inefficiencies in the code. Yes, I probably should not have committed to the master branch so often, but I am the only one working on the code anyway.)
-- To anyone who points out how the guests do not perform all of the interactions listed in their descriptions, please familiarize yourself with the double-slit experiment. :D The characters are in fact acting according to their descriptions, just not when you are looking at them.
+- To anyone who points out how the guests do not perform all of the interactions listed in their descriptions, please familiarize yourself with the double-slit experiment. :D The characters are in fact interacting according to their descriptions, just not when you are looking at them.
 
 ***
 
