@@ -2,10 +2,11 @@
 Theme Park Project created by JS, CH, and RS.
 ***
 ## Instructions
-1. Clone the repository.
-2. Run the executable file (Colors of History.exe) or run main.py in Python.
-3. It might take a few seconds for the program to run and load, so do not worry if you are stuck on a blank screen for a bit.
-4. The simplest way to exit the park is to go back to the menu screen and click the red exit button in the top right corner. Sometimes in some park sections, simply clicking the X of the Theme Park window (the main window; small windows should work as expected) will not allow you to exit the park. However, the back arrows (top left) will get you to the menu screen, where you can then exit with the aforementioned red exit button.
+1. I just realized that it only works on screens that are 1920 x 1080 pixels, so if you do not have that, I apologize; it probably will not work properly on your screen.
+2. Clone the repository.
+3. Run the executable file (Colors of History.exe) or run main.py in Python.
+4. It might take a few seconds for the program to run and load, so do not worry if you are stuck on a blank screen for a bit.
+5. The simplest way to exit the park is to go back to the menu screen and click the red exit button in the top right corner. Sometimes in some park sections, simply clicking the X of the Theme Park window (the main window; small windows should work as expected) will not allow you to exit the park. However, the back arrows (top left) will get you to the menu screen, where you can then exit with the aforementioned red exit button.
 ***
 Here is a list of everything you can do within the park:
 ### Menu Screen
